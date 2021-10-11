@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>RisingPheonix</title>
+  <%- include('extend/header.html') -%>
+</head>
+
+<body>
+  <header>
+    <%- include('extend/logo.html') -%>
+    <nav class="navHide">
+      <a href="/" class="active">Home</a>
+      <a href="/feature">Features</a>
+      <a href="/join">Join us</a>
+      <a href="/gallery">Gallery</a>
+      
+      <%- include('extend/user_btn.html') -%>
+    </nav>
+  </header>
+  <!-- this is for usermenu & login popup -->
+  <%- include('extend/popup.html') -%>
+  <!--   this is for main content -->
+  <section class="container">
+    <div class="box game">
+      <h2>Gaming Community</h2>
+      <img src="https://wallpapercave.com/wp/wp5053569.jpg">
+      <p>Our Gaming Community is for Games lover who loves playing trending games. you can also make team to play your favourite games.</p>
+      <a href="/join" class="btn"> Join us</a>
+    </div>
+    <div class="box anime">
+      <h2>Anime Community</h2>
+      <img src="https://wallpaperaccess.com/full/21612.jpg">
+      <p> This Community is for Man of Culture who love to discuss about their favourite anime, manga, manhwa and manhua. you will never going to be empty when are in this group.</p>
+      <a href="/feature" class="btn"> Watch Now</a>
+    </div>
+    <div class="box league">
+      <h2>Competitive League</h2>
+      <img src="https://image.freepik.com/free-vector/battle-versus-vs-background-sports-game_1017-23766.jpg">
+      <p>Our Competitive Community accept exceptionally talented players of club to our Competitive team for tournaments. <span class="highlight"> not yet available </span></p>
+      <a href="/join" class="btn"> Enter Now </a>
+    </div>
+  </section>
+  <div class="buzz">
+    <button onclick="window.location.href = '/join' " type="submit" class="btn">Join Us</button>
+  </div>
+
+  <%- include('extend/footer.html') -%>
+</body>
+
+</html>

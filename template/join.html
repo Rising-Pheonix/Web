@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Join Us</title>
+	<%- include('extend/header.html') -%>
+</head>
+
+<body>
+	<header>
+		<%- include('extend/logo.html') -%>
+		<nav class="navHide">
+			<a href="/">Home</a>
+			<a href="/feature">Features</a>
+			<a href="#" class="active">Join us</a>
+			<a href="/gallery">Gallery</a>
+			
+			<%- include('extend/user_btn.html') -%>
+		</nav>
+	</header>
+	<!-- this is for usermenu & login popup -->
+	<%- include('extend/popup.html') -%>
+	<!-- this is for join -->
+	<section class="join">
+		<div class="headBox">
+			<h2>Getting ready for your <span class="highlight">Adventure</span></h2>
+			<a href="#join" class="btn">Join us</a>
+		</div>
+		<div class="listBox">
+			<div class="list">
+				<div>
+					<i class="fas fa-gamepad"></i>
+				</div>
+				<h3>Play trending games with club members</h3>
+			</div>
+			<div class="list">
+				<div>
+					<i class="fas fa-user-graduate"></i>
+				</div>
+				<h3>Get advice from club experience players</h3>
+			</div>
+			<div class="list">
+				<div>
+					<i class="fas fa-person-skiing"></i>
+				</div>
+				<h3>Share Your talent and amazing plays</h3>
+			</div>
+			<div class="list">
+				<div>
+					<i class="fas fa-user-friends"></i>
+				</div>
+				<h3>Chat and make friends with club members</h3>
+			</div>
+		</div>
+	</section>
+	<div class="blockHead" id="join">
+		<h2>We are Rising-Pheonix</h2>
+		<p>Join your favourite group</p>
+	</div>
+	<section class="block">
+		<!-- this is for about us page -->
+		<div class="about">
+			<div class="aboutList">
+				<!-- this is mystic king box -->
+				<div class="box">
+					<h3>
+						<a href="https://chat.whatsapp.com/Hlj0KZdogdWGXpU7M5YJTW"><i class="fab fa-whatsapp"></i> MysticKing</a>
+					</h3>
+					<p>
+						MysticKing is for Games lover who loves playing trending games. you can also make team to play your favourite games.
+					</p>
+				</div>
+				<!--this is  holyweeb box-->
+				<div class="box">
+					<h3>
+						<a href="https://chat.whatsapp.com/D5ed7HHs3qq2oHK77Kq9Hj"><i class="fab fa-whatsapp"></i> HolyWeebs</a>
+					</h3>
+					<p>
+						This is group is for Man of Culture who love to discuss about there favourite anime, manga, manhwa and manhua. you will never going to be empty when are in this group.
+					</p>
+				</div>
+				<!-- this is for discord box-->
+				<div class="box discord">
+					<h3>
+						<a href="https://discord.gg/tFCXYTgZj8"><i class="fab fa-discord"></i> BrothersGaming</a>
+					</h3>
+					<p>
+						Want to chat with club members or playing games online but can't communicate!? then you came to right place! you can connect with voice chat to communicate with with your friends or club members.
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- this is for contact form -->
+		<div class="contact">
+			<h2><i class="fas fa-phone"></i> Contact us</h2>
+			<p>Ask your question directly from here</p>
+			<form class="msg" method="POST" action="#">
+				<div class="field">
+					<input type="text" id="username" placeholder=" " required name="username" />
+					<label for="username">Username</label>
+				</div>
+				<div class="field">
+					<input type="email" name="mail" id="mail" placeholder=" " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required />
+					<label for="mail">Email</label>
+				</div>
+				<div class="field">
+					<input type="text" name="topic" id="topic" placeholder=" " required>
+					<label for="topic">Question topic</label>
+				</div>
+				<div class="field">
+					<textarea name="" name="comment" id="comment" rows="4" maxlength="400" placeholder=" " required></textarea>
+					<label for="comment" class="lab">Write your question or message</label>
+				</div>
+				<button class="btn" type="submit">Send <i class="fas fa-paper-plane"></i></button>
+			</form>
+		</div>
+	</section>
+	<%- include('extend/footer.html') -%>
+</body>
+
+</html>

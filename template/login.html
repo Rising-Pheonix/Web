@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Login</title>
+  <%- include('extend/header.html') -%>
+</head>
+
+<body>
+  <header>
+    <%- include('extend/logo.html') -%>
+    <nav class="navHide">
+      <a href="/">Home</a>
+      <a href="/feature">Features</a>
+      <a href="/join">Join us</a>
+      <a href="/gallery">Gallery</a>
+      
+      <div class="user" onclick="window.location ='/register' ">
+        <img onerror="this.src = alt" class="photo" src="" alt="/static/img/user.svg" />
+      </div>
+    </nav>
+  </header>
+  <!-- this is for login  -->
+  <div class="form">
+    <form id="boxsign" method="POST" action="/" accept-charset="utf-8">
+      <h2> Login </h2>
+      <p> Don't have an Account? <a href="/register"> Sign in</a></p>
+      <em class="flash">Your email is already registered! please login</em>
+      <div class="field">
+        <input type="email" id="email" name="email" placeholder=" " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Please Complete your Email Address" required />
+        <label for="email">Email ID</label>
+      </div>
+      <div class="field">
+        <input type="password" id="password" name="password" placeholder=" " required pattern=".{8,}" title="Please Enter Correct Password" />
+        <label for="password">Password</label>
+      </div>
+      <button class="btn" type="submit"><span class="fas fa-user"></span> Login</button>
+    </form>
+  </div>
+  <%- include('extend/footer.html') -%>
+</body>
+
+</html>

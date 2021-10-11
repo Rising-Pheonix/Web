@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Register</title>
+  <%- include('extend/header.html') -%>
+</head>
+
+<body>
+  <header>
+    <%- include('extend/logo.html') -%>
+    <nav class="navHide">
+      <a href="/">Home</a>
+      <a href="/feature">Features</a>
+      <a href="/join">Join us</a>
+      <a href="/gallery">Gallery</a>
+      
+      <div class="user" onclick="window.location ='/login' ">
+        <img onerror="this.src = alt" class="photo" src="" alt="/static/img/user.svg" />
+      </div>
+    </nav>
+  </header>
+  <!-- this is for sign in  -->
+  <div class="form">
+    <form id="boxsign" method="POST" action="/" accept-charset="utf-8">
+      <h2> Create Account </h2>
+      <p>Already have an account? <a href="/login"> Login</a></p>
+      <div class="field">
+        <input type="text" id="username" named="username" placeholder=" " title="Username must be atleast 4 characters" pattern=".{4,}" required />
+        <label for="username">Username</label>
+      </div>
+      <div class="field">
+        <input type="email" id="email" name="email" placeholder=" " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Please Complete your email address" required />
+        <label for="email">Email ID</label>
+      </div>
+      <div class="field">
+        <input type="password" onchange="validatePassword();" name="password" placeholder=" " id="password" pattern=".{8,}" title="Your password must be atleast 8 characters" required />
+        <label for="password">Password</label>
+      </div>
+      <div class="field">
+        <input type="password" name="password" id="confirm_password" placeholder=" " onkeyup="validatePassword();" required />
+        <label for="confirm_password">Confirm Password</label>
+      </div>
+      <button class="btn" type="submit">
+        <i class="fa fa-user"></i>
+        <strong>Sign Up</strong>
+      </button>
+    </form>
+  </div>
+  
+  <script src="/static/js/form.js" async></script>
+  <%- include('extend/footer.html') -%>
+</body>
+
+</html>

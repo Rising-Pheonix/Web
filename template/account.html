@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Account</title>
+	<%- include('extend/header.html') -%>
+	<link rel="stylesheet" href="/static/css/user.css">
+</head>
+
+<body>
+	<header>
+		<%- include('extend/logo.html') -%>
+		<nav class="navHide">
+			<a href="/">Home</a>
+			<a href="/feature">Features</a>
+			<a href="/join">Join us</a>
+			<a href="/gallery">Gallery</a>
+			
+			<%- include('extend/user_btn.html') -%>
+		</nav>
+	</header>
+	<!-- this is for usermenu & login popup-->
+	<%- include('extend/popup.html') -%>
+	
+	<section class="account">
+	  <div>
+	  </div>
+	</section>
+	
+	<script src="/static/js/user.js" async></script>
+	<%- include('extend/footer.html') -%>
+</body>
+
+</html>

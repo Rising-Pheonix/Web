@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Not Found</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;900&display=swap" rel="stylesheet">
+  <style type="text/css" media="all">
+    body {
+      margin: 0;
+      color: #fff9;
+    }
+    .mainbox {
+      background-color: #2c3e50;
+      display: flex;
+      height: 512px;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .err {
+      font-family: 'Nunito Sans', sans-serif;
+      font-size: 12rem;
+      display: inline;
+    }
+
+    .far {
+      font-size: 9rem;
+      display: inline;
+    }
+    .msg {
+      text-align: center;
+      font-size:  1.2rem;
+      margin: 0 25%;
+    }
+    a {
+    	background: #0015;
+    	color: #c00; 
+    	padding: 2px 10px;
+    	text-decoration: none
+    }
+    a:hover {
+    	text-decoration: underline;
+    }
+    @media only screen and (max-width: 550px){
+      .mainbox {
+        height: 100vh;
+      }
+      .err {
+        font-size: 6rem;
+      }
+      .far {
+        font-size: 4.5rem;
+      }
+      .msg {
+        margin: 0 10%;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="mainbox">
+    <div class="logo">
+      <div class="err">
+        4
+        <i class="far fa-question-circle fa-spin"></i>
+        4
+        </div>
+    </div>
+    <div class="msg">Maybe this page moved? Got deleted? Is hiding out in quarantine? Either you aren't cool enough to visit this page or it doesn't exist .. .. ..like your social life.
+    <p>Let's go <a href="/">Home</a> and try from there.</p>
+    </div>
+  </div>
+  <!-- this is javascript -->
+  <script src="https://kit.fontawesome.com/4b9ba14b0f.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

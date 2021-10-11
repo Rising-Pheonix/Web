@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<%- include('extend/header.html') -%>
+	<title>Admin</title>
+	<style type="text/css" media="all">
+	form {
+		height: 512px;
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;
+		grid-gap: 10px;
+	}
+	form input {
+		padding: 8px 10px;
+		outline: none;
+	}
+	form input:focus {
+		border: 2px #a00 solid;
+	}
+	form .btn {
+		width: 120px;
+		margin-top: 10px;
+		background: #a00;
+		border-color: #a00;
+		color: #fff;
+		font-weight: 700;
+	}
+	</style>
+</head>
+
+<body>
+	<form action="/feature" method="post" accept-charset="utf-8">
+		<label for="title">Title</label>
+		<input type="text" name="title" id="title" required/>
+		<label for="thumbnail">Thumbnail</label>
+		<input type="url" name="thumbnail" id="thumbnail" required>
+		<label for="src">Source</label>
+		<input type="url" name="src" id="src" required/>
+		<!-- botton -->
+		<input class="btn" type="submit" value="Add" />
+	</form>
+</body>
+
+</html>

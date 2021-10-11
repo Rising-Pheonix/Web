@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Gallery Upload Form</title>
+	<%- include('extend/header.html') -%>
+	<link rel="stylesheet" href="/static/css/upload.css"/>
+</head>
+
+<body>
+	<header>
+		<%- include('extend/logo.html') -%>
+		<nav class="navHide">
+			<a href="/">Home</a>
+			<a href="/feature">Features</a>
+			<a href="/join">Join us</a>
+			<a href="/gallery">Gallery</a>
+			<a id="showbtn" class="btn"><i class="fas fa-user"></i> Login</a>
+		</nav>
+	</header>
+	<!-- this is for popup login-->
+	<section class="login">
+		<%- include('extend/popupLogin.html') -%>
+	</section>
+	<!-- this is for upload section-->
+	<main>
+		<form id="upload" method="POST" action="/gallery/upload" accept-charset="utf-8" enctype="multipart/form-data">
+			<h2>Gallery Album</h2>
+			<div class="field">
+				<input type="text" name="name" id="name" placeholder=" " required />
+				<label for="name">Username</label>
+			</div>
+			<div class="field">
+				<input type="text" name="title" id="eps" placeholder=" " maxlength="30" required />
+				<label for="eps">Title</label>
+			</div>
+			
+			<div class="admin">
+			  <label for="option">Post type</label>
+			  <select name="option" id="option">
+			    <option value="Image">Image</option>
+			    <option value="Video">Video</option>
+			  </select>
+			</div>
+			
+			<div class="fileField">
+				<label class="btn" for="file">
+					<i class="fas fa-photo-film"></i> ChooseFile</label>
+				<input type="file" name="file" id="file" placeholder=" " accept="image/*, video/*" required  hidden/>
+				<label id="filename" for="file">No File Choosen</label>
+				
+				<div class="wrap"></div>
+			</div>
+			
+			<em><span>Note: </span> Select only Video, Image and Audio as their are all supported but not other documents.
+			</em>
+			<div class="add">
+				<button class="btn" type="submit">
+					<b>UPLOAD</b>
+					<i class="fas fa-upload"></i>
+				</button>
+			</div>
+		</form>
+	</main>
+	
+	<script src="/static/js/upload.js" async></script>
+	<%- include('extend/footer.html') -%>
+</body>
+
+</html>

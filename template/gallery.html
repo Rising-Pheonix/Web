@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Gallery</title>
+  <%- include('extend/header.html') -%>
+</head>
+
+<body>
+  <header>
+    <%- include('extend/logo.html') -%>
+    <nav class="navHide">
+      <a href="/">Home</a>
+      <a href="/feature">Features</a>
+      <a href="/join">Join us</a>
+      <a href="#" class="active">Gallery</a>
+      <%- include('extend/user_btn.html') -%>
+    </nav>
+  </header>
+  <!-- this is for usermenu & login popup-->
+  <%- include('extend/popup.html') -%>
+  <!-- this is for gallery page -->
+  <section class="gallery">
+    <div class="uploadBox">
+      <div class="title">
+        <h2>Gallery</h2>
+        <h4>
+          Upload and share your best and amazing moments here. 
+        </h4>
+        <div class="add">
+          <a href="/gallery/upload" class="btn">
+            <b>UPLOAD</b>
+            <i class="fas fa-upload"></i>
+          </a>
+        </div>
+      </div>
+      <img src="/static/img/gallery.svg" alt="upload-background">
+    </div>
+    <nav>
+      <a href="#vid" class="active"><i class="fas fa-video"></i> Videos</a>
+      <a href="#pic" ><i class="fas fa-image"></i> Pictures</a>
+    </nav>
+    
+    <!-- this is for video section -->
+    
+    <div id="vid" class="mainBox">
+      <div class="list">
+        <div class="title">
+          <h3 class="postTitle">Drunk Girl</h3>
+        </div>
+        <iframe src="https://youtube.com/embed/JO365SMkrW8?modestbranding=1" class="vPlayer" allowfullscreen></iframe>
+        <div class="userPost">
+          <h3 class="author">@AKGamez</h3>
+          <h3 class="postDate">1months ago</h3>
+        </div>
+      </div>
+      
+      <div class="list">
+        <div class="title">
+          <h3 class="postTitle">Deaf Girl</h3>
+        </div>
+        <iframe src="https://youtube.com/embed/JUk6BiM5bm8?modestbranding=1" class="vPlayer" allowfullscreen></iframe>
+        <div class="userPost">
+          <h3 class="author">@AKGamez</h3>
+          <h3 class="postDate">2weeks ago</h3>
+        </div>
+      </div>
+      
+      <div class="list">
+        <div class="title">
+          <h3 class="postTitle">Dream Girl</h3>
+        </div>
+        <iframe src="https://youtube.com/embed/mCjFAK9JsnA?modestbranding=1" class="vPlayer" allowfullscreen></iframe>
+        <div class="userPost">
+          <h3 class="author">@Nakari</h3>
+          <h3 class="postDate">1hour ago</h3>
+        </div>
+      </div>
+    </div>
+    
+    <!-- this is for Image Section -->
+    
+    <div id="pic" class="mainBox">
+      
+      <div class="list">
+        <div class="title">
+          <h3 class="postTitle">Wedding Girl</h3>
+        </div>
+          <img class="iPlayer" src="https://i0.wp.com/i0.hdslb.com/bfs/article/116f800c287d838272b2ca183e48dba86f59978a.jpg" alt="thumbnail" />
+        <div class="userPost">
+          <h3 class="author">@AuthorName</h3>
+          <h3 class="postDate">1min ago</h3>
+        </div>
+      </div>
+      
+      <div class="list">
+        <div class="title">
+          <h3 class="postTitle">Beautiful Girl</h3>
+        </div>
+        <img class="iPlayer" src="https://i0.wp.com/i0.hdslb.com/bfs/article/38dfa5b9ec4d7b0804e9c19cd642031fc53d4986.jpg" alt="thumbnail" />
+        <div class="userPost">
+          <h3 class="author">@AuthorName</h3>
+          <h3 class="postDate">1min ago</h3>
+        </div>
+      </div>
+      
+      <div class="list">
+        <div class="title">
+          <h3 class="postTitle">Wonderful Girl</h3>
+        </div>
+        <img class="iPlayer" src="https://i.imgur.com/u3A9A2i.webp" alt="thumbnail" />
+        <div class="userPost">
+          <h3 class="author">@AuthorName</h3>
+          <h3 class="postDate">1min ago</h3>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  <script src="/static/js/gallery.js" async></script>
+  <%- include('extend/footer.html') -%>
+</body>
+
+</html>

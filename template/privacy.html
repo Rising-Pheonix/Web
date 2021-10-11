@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Privacy Terms to Use</title>
+	<%- include('extend/header.html') -%>
+	<link rel="stylesheet" href="/static/css/bulb.css">
+</head>
+
+<body>
+	<header>
+		<%- include('extend/logo.html') -%>
+		<nav class="navHide">
+			<a href="/">Home</a>
+			<a href="/feature">Features</a>
+			<a href="/join">Join us</a>
+			<a href="/gallery">Gallery</a>
+			
+			<%- include('extend/user_btn.html') -%>
+		</nav>
+	</header>
+	<!-- this is for usermenu & login popup-->
+	<%- include('extend/popup.html') -%>
+	<!-- this is for privacy page -->
+	<section class="privacy">
+		<div class="bulb">
+			<div class="wire"></div>
+			<div class="lightHead"></div>
+			<div class="lightOff"></div>
+		</div>
+		<button class="switch btn" type="button">ON</button>
+		<h2 class="titleOff">Coming Soon</h2>
+	</section>
+	
+	<script src="/static/js/bulb.js" async></script>
+	<%- include('extend/footer.html') -%>
+</body>
+
+</html>

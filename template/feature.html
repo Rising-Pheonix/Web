@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Feature</title>
+  <%- include('extend/header.html') -%>
+</head>
+
+<body>
+  <header>
+    <%- include('extend/logo.html') -%>
+    <nav class="navHide">
+      <a href="/">Home</a>
+      <a href="#" class="active">Features</a>
+      <a href="/join">Join us</a>
+      <a href="/gallery">Gallery</a>
+      
+      <%- include('extend/user_btn.html') -%>
+    </nav>
+  </header>
+  <!-- this is for usermenu & login popup-->
+  <%- include('extend/popup.html') -%>
+  <!-- this is for feature page -->
+  <section class="feature">
+    <h2 class="title">Popular Video 2021</h2>
+    <div class="frameBox">
+      <iframe class="player" src="/static/img/logo.mp4" name="player" allowfullscreen></iframe>
+      <!-- this is for player eps-->
+      <div class="eps">
+        <div class="btn">
+          <a href="https://www.youtube.com/embed/dJlrYEdw3bg?modestbranding=1" target="player" class="link">
+            <img src="https://img.youtube.com/vi/dJlrYEdw3bg/hq720.jpg" alt="thumbnail" />
+            <p>I'am getting married to a girl who i hate in class</p>
+          </a>
+          <a href="#" class="delete"><i class="fas fa-trash-can"></i></a>
+        </div>
+        <div class="btn">
+          <a href="https://www.youtube.com/embed/JF-laAVYAGA?modestbranding=1" target="player" class="link">
+            <img src="https://img.youtube.com/vi/JF-laAVYAGA/hq720.jpg" alt="thumbnail" />
+            <p>I'am getting married to a girl who i hate in class [Part 2]</p>
+          </a>
+          <a href="#" class="delete"><i class="fas fa-trash-can"></i></a>
+        </div>
+        <div class="btn">
+          <a href="https://www.youtube.com/embed/RMlx1vRXhSk?modestbranding=1" target="player" class="link">
+            <img src="https://img.youtube.com/vi/RMlx1vRXhSk/hq720.jpg" alt="thumbnail" />
+            <p>I'am getting married to a girl who i hate in class [Part 3]</p>
+          </a>
+          <a href="#" class="delete"><i class="fas fa-trash-can"></i></a>
+        </div>
+        <div class="btn">
+          <a href="https://www.youtube.com/embed/pW4XVyNgdJk?modestbranding=1" target="player" class="link">
+            <img src="https://img.youtube.com/vi/pW4XVyNgdJk/mqdefault.jpg" alt="#" />
+            <p>I'am getting married to a girl who i hate in class [Part 4]</p>
+          </a>
+          <a href="#" class="delete"><i class="fas fa-trash-can"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="add">
+      <a href="/feature/admin" class="btn">
+        <i class="fas fa-plus"></i>
+      </a>
+    </div>
+  </section>
+  <%- include('extend/footer.html') -%>
+</body>
+
+</html>
