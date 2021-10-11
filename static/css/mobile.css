@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap');
+@import "main.css";
+
+
+@media screen and (max-width: 868px) {
+
+  :root {
+    scroll-padding-top: 60px;
+  }
+
+  .flash {
+    font-size: 0.6rem;
+  }
+
+
+  body {
+    max-width: 500px;
+    min-width: 320px;
+    box-shadow: 0 -1px 5px #2222, 0 1px 5px #2222;
+  }
+
+  footer {
+    font-size: 13px;
+    margin: 0;
+  }
+
+  footer .footNav a {
+    font-size: 20px;
+    margin: 0 8px;
+  }
+
+  header {
+    flex-flow: row;
+    position: sticky;
+    z-index: 4;
+    top: 0;
+    align-items: center;
+    grid-gap: 25%;
+    justify-content: space-around;
+    padding: 8px 0;
+  }
+
+  header .menuBar {
+    display: flex;
+    background: #a00;
+    padding: 5px;
+    font-size: 18px;
+    border: 1px outset #a00;
+    box-shadow: 0 0 1px #000;
+    border-radius: 2px;
+  }
+
+  header .menuBar:active {
+    border: 1px inset #a00;
+    transform: scale(0.90);
+  }
+
+  header .logo h1 {
+    font-size: 1.8rem;
+    letter-spacing: -4px;
+  }
+
+  header .logo {
+    align-self: stretch;
+  }
+
+  header .navHide {
+    transform: translateY(127px) scaleY(0);
+    transform-origin: center top;
+    display: flex;
+    text-align: left;
+    align-items: start;
+    flex-flow: column;
+    width: 100%;
+    padding: 10px;
+    position: absolute;
+    background: #eee;
+    transition: all 0.2s;
+    z-index: 4;
+  }
+
+  header nav.navShow {
+    transform: translateY(127px) scaleY(1);
+    box-shadow: 0 -1px #0009 inset;
+  }
+
+  header nav a {
+    flex: 1;
+    width: 100%;
+    font-size: 0.75rem;
+    letter-spacing: 0;
+    margin-inline: 0;
+    margin-block: 10px 0;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+    position: relative;
+  }
+
+  header nav a:hover:not(.btn),
+  header nav a.active:not(.btn) {
+    text-align: center;
+    letter-spacing: 10px;
+    font-size: 0.8rem;
+  }
+
+  header nav a:not(.btn)::before {
+    height: 2px;
+  }
+
+  header nav .user {
+    margin-block: 15px 0;
+    align-self: center;
+    width: 32px;
+    height: 32px;
+  }
+
+
+
+  .login {
+    position: relative;
+  }
+
+  .login .form .cancel {
+    font-size: 18px;
+    padding: 1px 4px;
+    top: 10px;
+    right: 8%;
+  }
+
+  .login .form {
+    top: 160px;
+    position: fixed;
+  }
+
+  .login .form #boxsign {
+    width: 90%;
+    padding: 10px 10%;
+  }
+
+
+  /* this is for main */
+
+  .container {
+    display: grid;
+    grid-template: auto / 1fr;
+    margin: 0;
+  }
+
+  .container .box {
+    font-size: 0.75rem;
+    padding: 10px 8%;
+    width: unset;
+    margin: 0;
+  }
+
+  .container .box:hover {
+    margin: 0 3%;
+    padding: 10px 5%;
+  }
+
+  .container .box .btn {
+    font-size: 14px;
+  }
+
+  .buzz {
+    margin: 0;
+  }
+
+
+  /* this is for login page */
+
+  .form #boxsign {
+    width: 90%;
+    padding: 10px 8%;
+  }
+
+  .form #boxsign .field input {
+    width: 100%;
+  }
+
+  .form #boxsign .btn {
+    font-size: 0.9rem;
+  }
+
+
+
+  /* this is for join page */
+
+  .join .headBox {
+    height: 180px;
+    border-bottom-left-radius: 50% 60%;
+  }
+
+  .join .headBox h2 {
+    font-size: 20px;
+  }
+
+  .join .headBox .btn {
+    font-size: 16px;
+    padding: 4px 10px;
+  }
+
+  .join .listBox .list {
+    font-size: 12px;
+    flex: 1 0 40%;
+  }
+
+  .join .listBox .list div {
+    font-size: 16px;
+    width: 54px;
+    height: 54px;
+  }
+
+  /*   this is for about us page */
+  .blockHead {
+    align-items: stretch;
+  }
+
+  .blockHead h2 {
+    font-size: 24px;
+  }
+
+  .blockHead p {
+    font-size: 16px;
+  }
+
+
+  .block {
+    grid-template: auto / 1fr;
+    padding: 10px 0;
+  }
+
+  .block .about .aboutList {
+    padding: 10px;
+    grid-gap: 10px;
+  }
+
+  .block .about .aboutList .box h3 {
+    font-size: 18px;
+  }
+
+  .block .about .aboutList .box p {
+    font-size: 14px;
+  }
+
+
+
+  /* this is for contact us page */
+  .block .contact {
+    width: initial;
+    padding: 20px 0;
+    place-self: unset;
+    margin: 0 10px;
+  }
+
+  .block .contact h2 {
+    font-size: 24px;
+  }
+
+  .block .contact p {
+    font-size: 16px;
+  }
+
+  .block .contact .msg {
+    width: 80%;
+  }
+
+  .block .contact .msg .field {
+    padding: 16px 0 0;
+  }
+
+  .msg .field label {
+    font-size: 14px;
+    transform: translateY(45%);
+  }
+
+  .msg .field [id] {
+    font-size: 14px;
+  }
+
+  .block .contact .msg .btn {
+    font-size: 16px;
+  }
+
+
+  /*  this is for feature page */
+  .feature .title {
+    font-size: 20px;
+  }
+
+  .feature .frameBox {
+    flex-flow: column;
+    padding: 5px;
+  }
+
+  .feature .frameBox .player {
+    flex: 1;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .feature .frameBox .eps {
+    flex: 1;
+    width: 100%;
+    padding: 10px 5px;
+    grid-gap: 10px;
+  }
+
+  .frameBox .eps .btn .link {
+    padding: 8px;
+    grid-gap: 6px;
+  }
+
+  .frameBox .eps .btn .link p {
+    font-size: 10px;
+  }
+
+  .feature .add {
+    justify-content: center;
+  }
+
+  .feature .add .btn {
+    font-size: 16px;
+  }
+
+  /*this  is for gallery page*/
+  .gallery .uploadBox {
+    height: auto;
+    flex-flow: column-reverse;
+    align-items: stretch;
+    justify-content: stretch;
+  }
+
+  .gallery .uploadBox .title {
+    flex: 0 0 1;
+    width: 100%;
+    margin: 0;
+    align-items: center;
+  }
+
+  .uploadBox .title h2 {
+    font-size: 26px;
+  }
+
+  .uploadBox .title h4 {
+    font-size: 16px;
+  }
+
+  .uploadBox .title .add .btn {
+    font-size: 16px;
+    padding: 6px;
+    min-width: 140px;
+  }
+
+  .gallery .uploadBox img {
+    flex: 0 0 1;
+    transform: scale(1);
+    width: 100%;
+  }
+
+  /*this for content updating*/
+  .gallery .mainBox {
+    padding: 10px;
+    grid-gap: 20px;
+    grid-template: auto/ 1fr;
+  }
+
+  .gallery .mainBox .list {
+    flex: 1;
+    width: 100%;
+  }
+
+  .mainBox .fslist {
+    position: fixed;
+    width: 100vw;
+  }
+
+  .mainBox .fslist .iPlayer {
+    height: auto;
+    max-width: 96%;
+  }
+}

@@ -1,0 +1,93 @@
+/* this is for privacy page */
+.privacy {
+	display: flex;
+	height: 512px;
+	flex-flow: column;
+	justify-content: start;
+	align-items: center;
+	background: #2c3e50;
+	overflow: hidden;
+}
+
+.privacy .bulb {
+	height: 60%;
+	position: relative;
+	transform: rotateZ(-20deg) translateX(50px);
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	animation: swing 1500ms infinite ease-in-out both alternate;
+}
+
+@keyframes swing {
+	100% {
+		transform: rotateZ(20deg) translateX(-50px);
+	}
+}
+
+.privacy .bulb .wire {
+	height: 180px;
+	background: #000;
+	width: 2px;
+}
+
+.privacy .bulb .lightHead {
+	clip-path: polygon(45% 0%, 55% 0%, 100% 100%, 0 100%);
+	background: #000;
+	height: 30px;
+	width: 66px;
+	margin: 0;
+	z-index: 1;
+}
+
+.privacy .bulb .lightOff {
+	background: #fff2;
+	height: 54px;
+	margin: 0;
+	width: 54px;
+	border-radius: 50%;
+	border-left: 2px solid #fff3;
+	position: relative;
+	top: -10px;
+	transition: all 0.2s;
+}
+
+.privacy .bulb .lightOn {
+	background: #fff;
+	box-shadow: 0 0 5px #fff9, 0 0 10px #fff9, 0 0 160px 80px #fff3;
+}
+
+.privacy .switch {
+	padding: 6px 0;
+	width: 100px;
+	background: #000;
+	color: #fff9;
+	font-weight: 700;
+	font-size: 18px;
+	border: 1px outset #fff3;
+	transition: all 0.2s;
+}
+
+.privacy .switch:active {
+	border: 1px inset #fff3;
+	transform: scale(0.96);
+}
+
+.privacy .titleOff {
+	border-bottom: 3px solid #fff3;
+	padding: 2px 10px;
+	font-weight: 700;
+	word-spacing: 8px;
+	text-transform: uppercase;
+	color: #fff3;
+	font-size: 24px;
+	transition: all 0.2s;
+}
+
+.privacy .titleOn {
+	border-bottom: 3px solid #fff;
+	color: #fff;
+	text-shadow: 0 0 5px #fff9;
+	box-shadow: 0 6px 5px -6px #fff9;
+}
+

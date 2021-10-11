@@ -1,0 +1,184 @@
+main {
+	height: 512px;
+}
+
+main form {
+	height: 100%;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	flex-flow: column;
+}
+
+main form h2 {
+	border-bottom: 3px solid #a00;
+	padding: 0 10px;
+	color: #a00;
+}
+
+main .admin {
+  margin: 10px 0;
+}
+
+
+main form .field,
+form .fileField {
+	position: relative;
+	margin: 30px 0 0;
+}
+
+main form .fileField {
+	position: relative;
+	margin: 20px 0;
+}
+
+main form input {
+	padding: 6px 10px;
+	outline: none;
+	border: none;
+	border-bottom: 1px solid #0009;
+	width: 40vw;
+	transition: all 0.2s;
+}
+
+main form .field label {
+	position: absolute;
+	color: #0009;
+	left: 10px;
+	transform: translateY(20%);
+	transition: all 0.2s;
+}
+
+main form .fileField #filename {
+	font-size: revert;
+	color: #0009;
+	font-style: normal;
+	margin: 5px;
+	font-size: 14px;
+	padding: 2px 3px;
+	border-radius: 0;
+	border: none;
+	border-bottom: 1px solid #0009;
+	background: transparent;
+}
+
+main form .fileField input:valid:not(:placeholder-shown)+#filename {
+	color: #a00;
+	font-weight: 700;
+	border-bottom: 2px solid #a00;
+}
+.fileField .bar {
+  background: #ddd;
+  margin: 10px 0 0;
+  padding: 10px;
+  grid-gap: 5px;
+  border-radius: 4px;
+  display: flex;
+  flex-flow: column;
+}
+.fileField .bar .status {
+  font-weight: 600;
+  color: #0009;
+  font-size: 14px;
+}
+.fileField .bar .progress {
+  width: 0%;
+  background: #a00;
+  color: #fff;
+  border-radius: 2px;
+  text-align: center;
+}
+
+
+
+main form .btn {
+	background: #a00;
+	color: #fff;
+	border-color: #a00;
+	border-width: 1px;
+	border-radius: 2px;
+	padding: 3px 6px;
+	font-weight: 400;
+}
+
+main form label.btn:active {
+	font-weight: 400;
+}
+
+form .field input:focus,
+form .field input:focus:not(:placeholder-shown) {
+	border: none;
+	border-bottom: 2px solid #a00;
+}
+
+form .field input:focus+label,
+form .field input:not(:placeholder-shown)+label {
+	color: #a00;
+	font-weight: 700;
+	left: 5px;
+	transform: translateY(-75%) scale(0.94);
+}
+
+form .field .field input:invalid:not(:placeholder-shown) {
+	border: none;
+	border-bottom: 2px solid #a00;
+}
+
+form .field input:valid:not(:placeholder-shown) {
+	border: none;
+	border-bottom: 2px solid #a00;
+}
+
+form .field input:valid:not(:placeholder-shown)+label::after {
+	content: " ✓";
+	word-spacing: 10px;
+}
+
+form .add {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+form .add .btn {
+	color: #fff;
+	padding: 6px 0;
+	margin: 10px 0 0;
+	font-size: 16px;
+	text-transform: uppercase;
+	background: #a00;
+	border-color: #a00;
+	display: flex;
+	width: 140px;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+main form em {
+	font-size: 10px;
+	display: block;
+	color: #fff;
+	font-style: normal;
+	font-weight: 400;
+	margin: 5px 25%;
+	padding: 2px 3px;
+	border-radius: 2px;
+	border: 1px solid #000;
+	background: #c44;
+}
+
+main form em span {
+	font-weight: 700;
+}
+
+@media only screen and (max-width: 868px) {
+	main form .field input {
+		width: 80vw;
+	}
+
+	main form em {
+		margin: 2px;
+		font-size: 8px;
+	}
+}

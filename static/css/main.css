@@ -1,1 +1,1113 @@
-here
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap');
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+:root {
+	scroll-behavior: smooth;
+	background: #fff;
+	overflow-y: auto;
+	overflow-y: overlay;
+}
+
+::-webkit-scrollbar{
+	width: 0.5em;
+}
+::-webkit-scrollbar-track{
+	background: #222;
+	margin-block: 5em;
+	border-radius: 100vw;
+	background-clip: content-box;
+}
+::-webkit-scrollbar-thumb{
+	background: #f00;
+	border:  2px #222 solid;
+	border-radius: 100vw;
+}
+body {
+	max-width: 1024px;
+	margin: 0 auto;
+	font-family: 'Nunito', sans-serif;
+}
+
+a {
+	color: #f00;
+	text-decoration: none;
+}
+
+a:not(.btn):hover {
+	text-decoration: underline;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.btn {
+	color: #fff;
+	font-family: 'Nunito', sans-serif;
+	padding: 5px 10px;
+	border-radius: 2px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-gap: 10px;
+	font-weight: 700;
+	transition: all 0.2s;
+	text-decoration: none;
+	border-width: 2px;
+	border-style: outset;
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.btn:active {
+	transform: scale(0.95);
+	text-decoration: none;
+	border-style: inset;
+}
+
+.flash {
+  font-size: 0.7rem;
+  display: block;
+  color: #fff;
+  text-transform: capitalize;
+  font-style: normal;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  margin: 10px 0;
+  padding: 2px 3px;
+  border-radius: 2px;
+  border: 1px solid #000;
+  background: #c44;
+}
+
+
+
+
+
+/* this is for footer */
+footer {
+	text-align: center;
+	display: flex;
+	flex-flow: column;
+	padding: 10px;
+	line-height: 1.5;
+	background: #2c3e50;
+	color: #fff9;
+}
+
+footer h4, footer h5 {
+	margin: 0;
+}
+
+footer .footNav a {
+	color: inherit;
+	font-size: 24px;
+	margin: 0 8px;
+	padding: 0;
+}
+
+footer .footNav a:hover {
+	text-decoration: none;
+	color: #a00;
+	text-shadow: 1px 1px #000;
+}
+
+footer .footNav a:nth-child(2):hover {
+	color: dodgerblue;
+}
+
+footer .footNav a:nth-child(3):hover {
+	color: deepskyblue;
+}
+
+
+
+
+
+
+/* this is for heading */
+
+header {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-between;
+	background: #eee;
+	padding: 8px 10px;
+	box-shadow: 0 0 1px #0007;
+}
+
+/* this is for logo */
+
+header .logo h1 {
+	margin: 0;
+	letter-spacing: -6px;
+	font-family: 'Cinzel Decorative', 'Nunito';
+	font-variant: small-caps;
+	color: #f00;
+	font-weight: 700;
+	padding-inline: 0 12px;
+	font-size: 2.4rem;
+	-webkit-text-stroke: 1px #000;
+	display: inline-block;
+}
+
+header .menuBar {
+	display: none;
+}
+
+/* this is for navigation */
+header nav {
+	background: 0033;
+	padding: 10px 0;
+}
+
+header nav a {
+	color: inherit;
+	text-transform: uppercase;
+	margin-inline: 0 30px;
+	font-weight: 800;
+	font-size: 1.1rem;
+	border-bottom: 3px solid transparent;
+	position: relative;
+	transition: all 0.3s;
+}
+
+header nav a::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 3px;
+	background-color: #a00;
+	transform-origin: bottom right;
+	transform: scaleX(0);
+	transition: transform 0.3s;
+}
+
+header nav a:hover:not(.btn),
+header nav a.active:not(.btn) {
+	color: #a00;
+	text-decoration: none;
+	text-align: center;
+}
+
+header nav a:hover:not(.btn)::before,
+header nav a.active:not(.btn)::before {
+	transform-origin: bottom left;
+	transform: scaleX(1);
+}
+
+
+header nav .user {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  border-radius: 15%;
+  overflow: hidden;
+  outline: 1.5px outset #a00;
+  box-shadow: 0 0 5px #0009;
+  vertical-align: middle;
+  position: relative;
+  transition: all 0.3s;
+}
+header nav .user:active {
+  outline-offset: 2px;
+  outline-style: dashed;
+  background: #c007;
+}
+
+header nav .user .photo {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
+
+
+/* this is for popup login */
+.login .form .cancel {
+	position: absolute;
+	display: inline-block;
+	z-index: 6;
+	top: 9px;
+	right: 26%;
+	color: #fff;
+	background: #c00;
+	padding: 2px 6px;
+	font-size: 24px;
+	border: 1px outset #c00;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.login .form .cancel:active {
+	border-style: inset;
+	transform: scale(0.9);
+}
+
+.login .form {
+	transition: all 0.5s;
+	color: #000;
+	position: absolute;
+	height: auto;
+	width: 100%;
+	z-index: 5;
+	left: 50%;
+	top: 100px;
+	opacity: 0;
+	transform: translate(-50%, 0) scale(0);
+}
+
+.login .form::before {
+	content: "";
+	transition: none;
+	background: #0009;
+	width: 100%;
+	height: 1000%;
+	position: absolute;
+}
+
+.login .form #boxsign {
+	text-align: center;
+	position: relative;
+	width: 50%;
+	padding: 20px 6%;
+	overflow: auto;
+	border-radius: 14px;
+	background: url("../img/bg.jpeg") no-repeat center/cover;
+}
+
+
+
+
+
+/* this is for main content */
+
+.container {
+	display: flex;
+	flex-flow: row wrap;
+	box-sizing: border-box;
+	justify-content: space-evenly;
+}
+
+.container .box {
+	padding: 10px;
+	box-shadow: 0 0 0.5px #0002;
+	text-align: center;
+	flex: 1;
+	width: 33%;
+	transition: all 0.3s;
+}
+.container .box:hover {
+	border: 2px solid #000;
+	box-shadow: -2px -2px 0px #0009 inset, 2px 2px 0px #fff7 inset;
+	transform: scale(0.94);
+	border-radius: 5px;
+	color: #fff;
+}
+.container .box:nth-child(1):hover {
+	background: #2c3e50;
+}
+
+.container .box:nth-child(2):hover {
+	background: steelblue;
+}
+
+.container .box:nth-child(3):hover {
+	background: cadetblue;
+}
+
+.container .box img {
+	width: 100%;
+	aspect-ratio: 16/9;
+	margin: 0;
+	border-radius: 4px;
+	border: 1px solid black;
+}
+
+
+.container .box h2 {
+	border: 2px solid #000;
+	padding: 5px 16px;
+	margin: 10px 0;
+	border-radius: 2px;
+	color: #fff;
+}
+
+.container .game h2 {
+	background: linear-gradient(60deg, darkslategrey, slategrey);
+}
+
+.container .anime h2 {
+	background: blue linear-gradient(60deg, royalblue, cornflowerblue);
+}
+
+.container .league h2 {
+	background: linear-gradient(60deg, seagreen, mediumseagreen);
+}
+
+.container .box p {
+	font-weight: 700;
+	margin: 10px 0;
+}
+
+.container .box .btn {
+	font-size: 1.2rem;
+	display: inline-block;
+	padding: 5px 14px;
+	margin: 10px 0;
+}
+
+.container .game .btn {
+	background: linear-gradient(60deg, darkslategrey, slategrey);
+	border-color: slategrey;
+}
+
+.container .anime .btn {
+	background: linear-gradient(60deg, royalblue, cornflowerblue);
+	border-color: cornflowerblue;
+}
+
+.container .league .btn {
+	background: linear-gradient(60deg, seagreen, mediumseagreen);
+	border-color: mediumseagreen;
+	pointer-events: none;
+	cursor: default;
+	text-decoration: 3px line-through #a00;
+}
+
+
+
+/* this is for animation */
+@keyframes buzz {
+	0% {
+		transform: translateY(0) scale(0.5);
+		box-shadow: 0 0 5px black;
+	}
+
+	100% {
+		transform: translateY(-40px) scale(1);
+		box-shadow: 0 50px 40px black;
+	}
+}
+
+
+.buzz {
+	display: flex;
+	height: 150px;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 0 1px #0005;
+}
+
+.buzz .btn {
+	animation: buzz 0.7s cubic-bezier(0.1, 0.25, 0.1, 1) infinite alternate both;
+	cursor: pointer;
+	padding: 5px 14px;
+	background: #a00;
+	border-color: #a00;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+}
+
+
+
+
+/* this is for Sign in page */
+.form {
+	display: flex;
+	flex-flow: column;
+	height: 512px;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	justify-content: center;
+	align-items: center;
+}
+
+.form::before {
+	background: url("../img/bg.jpeg") no-repeat center/cover;
+	content: "";
+	width: 100%;
+	height: 512px;
+	position: absolute;
+	opacity: 0.6;
+	z-index: -1;
+}
+
+.form #boxsign {
+	text-align: center;
+	width: 50%;
+	display: flex;
+	flex-flow: column;
+	padding: 20px 6%;
+	overflow: auto;
+	border-radius: 14px;
+	box-shadow: 0 1px 3px #0007;
+	background: transparent;
+}
+
+.form #boxsign h2 {
+	margin: 0 0 2%;
+	letter-spacing: 1px;
+	border-bottom: 3px solid #000;
+}
+
+.form #boxsign p {
+	margin: 0 0 2%;
+}
+
+
+
+/* this for input fields */
+
+.form #boxsign .field {
+	padding: 8px 0;
+	position: relative;
+}
+
+.form #boxsign .field input {
+	width: 100%;
+	outline: none;
+	border: 1px solid #0009;
+	color: #000;
+	font-family: 'Nunito', sans-serif;
+	padding: 10px 16px;
+	background: transparent;
+	transition: all 0.2s;
+	border-radius: 4px;
+}
+
+.form #boxsign .field label {
+	position: absolute;
+	left: 5%;
+	transform: translateY(45%);
+	color: #0009;
+	transition: all 0.2s;
+}
+
+
+/* this is for floating label */
+.form #boxsign .field input:valid:not(:placeholder-shown) {
+	border: 2px solid #0a0;
+}
+
+.form #boxsign .field input:valid:not(:placeholder-shown)~label {
+	color: #0a0;
+}
+
+.form #boxsign .field input:valid:not(:placeholder-shown)~label::after {
+	color: #0a0;
+	content: " ✓";
+	word-spacing: 5px;
+}
+
+
+.form #boxsign .field input:invalid:not(:placeholder-shown)~label::after {
+	color: #a00;
+	content: " ✗";
+	word-spacing: 5px;
+}
+
+.form #boxsign .field input:invalid:not(:placeholder-shown) {
+	border: 2px solid #a00;
+}
+
+
+.form #boxsign .field input:invalid:not(:placeholder-shown)~label {
+	color: #a00;
+}
+
+.form #boxsign .field input:focus,
+.field input:not(:placeholder-shown) {
+	border: 2px solid #000;
+}
+
+.form #boxsign .field input:focus~label,
+.form #boxsign .field input:not(:placeholder-shown)~label {
+	padding: 0 5px;
+	color: #000;
+	background: #fff;
+	font-weight: 700;
+	left: 3%;
+	transform: scale(0.95) translateY(-55%);
+}
+
+.form #boxsign .btn {
+	padding: 5px 14px;
+	background: #a00;
+	border-color: #a00;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	align-self: center;
+}
+
+
+/* this is for join page */
+.join {
+	color: #fff;
+	background: #ddd;
+}
+
+.join .headBox {
+	display: flex;
+	flex-flow: column;
+	height: 240px;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	background: #2c3e50;
+	border-bottom-left-radius: 50% 65%;
+}
+
+.join .headBox h2 {
+	font-size: 32px;
+	font-weight: 800;
+}
+
+.join .headBox h1 .highlight,
+.highlight {
+	color: #a00;
+	padding: 0 3px;
+	border-bottom: 2px solid #a00;
+}
+
+.join .headBox .btn {
+	background: #a00;
+	border-color: #a00;
+	font-size: 26px;
+	font-weight: 800;
+	margin: 10px 0 0;
+	padding: 4px 20px;
+}
+
+.join .listBox {
+	display: flex;
+	padding: 20px 10px;
+	flex-flow: row wrap;
+	grid-gap: 10px;
+	text-align: center;
+	color: #fff9;
+}
+
+.join .listBox .list {
+	background: #2c3e50;
+	border-radius: 5px;
+	box-shadow: -1px -2px 0px #0009 inset, 1px 1px 0px #fff7 inset;
+	border: 2px solid #000;
+	flex: 1 1 0;
+	padding: 20px 5px;
+	transition: all 0.2s;
+}
+
+.join .listBox .list:hover {
+	transform: scale(0.95);
+	color: #fff;
+	background: #a00;
+}
+
+.join .listBox .list div {
+	background: #000;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	width: 81px;
+	height: 81px;
+	border-radius: 50%;
+	font-size: 24px;
+}
+
+
+
+
+/* this is for about us page */
+.blockHead {
+	border-bottom: 2px solid #a00;
+	margin: 10px 0 0;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+
+.blockHead h2 {
+	color: #a00;
+	font-size: 30px;
+	border-left: 6px solid #a00;
+	border-right: 6px solid #a00;
+	padding: 10px 20px;
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.blockHead p {
+	color: #0009;
+	font-weight: 700;
+	font-size: 22px;
+	text-align: center;
+	margin: 0 0 10px 0;
+}
+
+
+.block {
+	display: grid;
+	grid-template: auto/ repeat(2, 1fr);
+	color: #fff;
+	padding: 10px;
+	text-align: center
+}
+
+.block .about .aboutList {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0 10px 0 0;
+	grid-gap: 10px;
+	color: #fff9;
+}
+
+.block .about .aboutList .box a {
+	text-decoration: none;
+	color: inherit;
+	display: block;
+}
+
+.block .about .aboutList .box {
+	flex: 1 0 0;
+	border-radius: 5px;
+	background: #2c3e50;
+	box-shadow: -2px -2px 0px #0009 inset, 2px 2px 0px #fff7 inset;
+	border: 2px solid #000;
+	padding: 20px;
+	transition: all 0.2s;
+}
+
+.block .about .aboutList .box:hover {
+	transform: scale(0.95);
+	color: #fff;
+	background: cadetblue;
+}
+
+.block .about .aboutList .discord:hover {
+	background: cornflowerblue;
+}
+
+.block .about .aboutList .box h3 {
+	font-size: 24px;
+	color: #fff;
+	padding: 5px 10px;
+	border-radius: 2px;
+	margin: 0;
+	border: 2px outset mediumseagreen;
+	display: inline-block;
+	background: mediumseagreen;
+	transition: all 0.2s;
+}
+
+.block .about .aboutList .discord h3 {
+	background: royalblue;
+	border: 2px outset royalblue;
+}
+
+.block .about .aboutList .box h3:active {
+	transform: scale(0.95);
+	border-style: inset;
+}
+
+.block .about .aboutList .box p {
+	font-size: 20px;
+	font-weight: 600;
+	margin: 15px 0 0;
+}
+
+
+
+
+/* this is for contact us page */
+.block .contact {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	align-self: start;
+	background: #2c3e50;
+	border: 2px solid #000;
+	padding: 25px;
+	border-radius: 5px;
+	box-shadow: -2px -2px 0px #0009 inset, 2px 2px 0px #fff7 inset;
+}
+
+.block .contact h2 {
+	color: #c00;
+	border-bottom: 3px solid #c00;
+	font-size: 30px;
+	padding: 0 10px;
+	margin: 0 0 5px;
+	text-transform: uppercase;
+}
+
+.block .contact p {
+	font-size: 20px;
+	margin: 0;
+	font-weight: 700;
+	color: #fff9;
+}
+
+.block .contact .msg {
+	display: flex;
+	flex-flow: column;
+	position: relative;
+	text-align: center;
+	width: 90%;
+}
+
+.block .contact .msg .field {
+	display: flex;
+	padding: 20px 0 0;
+}
+
+.msg .field label {
+	font-size: 18px;
+	position: absolute;
+	left: 4%;
+	color: #fff6;
+	transform: translateY(50%);
+	transition: all 0.3s;
+}
+
+.msg .field [id] {
+	outline: none;
+	font-size: 18px;
+	width: 100%;
+	border: 1px solid #fff6;
+	color: #fff;
+	font-family: 'Nunito', sans-serif;
+	resize: none;
+	font-weight: 600;
+	padding: 10px;
+	background: transparent;
+	transition: all 0.3s;
+	border-radius: 4px;
+}
+
+.msg .field [id]:focus {
+	border: 2px solid #fff;
+}
+
+.msg .field [id]:focus~label,
+.msg .field [id]:not(:placeholder-shown)~label {
+	color: #fff;
+	font-weight: 700;
+	background: #2c3e50;
+	padding: 0 5px;
+	left: 2%;
+	transform: translateY(-50%) scale(0.90);
+}
+
+.msg .field [id]:valid:not(:placeholder-shown) {
+	border: 2px solid #0a0;
+	color: #0a0;
+}
+
+.msg .field [id]:valid:not(:placeholder-shown)~label {
+	color: #0a0;
+}
+
+.block .contact .msg .btn {
+	background: #a00;
+	color: #fff;
+	font-size: 22px;
+	font-family: 'Nunito', sans-serif;
+	border-color: #a00;
+	margin: 10px 0 0;
+}
+
+
+
+/* this is for feature page */
+.feature .title {
+	/* margin: 10px 0 0; */
+	text-align: center;
+	padding: 10px;
+	font-weight: 800;
+	color: #fff;
+	background: #a00;
+}
+
+.feature .frameBox {
+	display: flex;
+	padding: 10px;
+	background: #ddd;
+}
+.feature .frameBox .player {
+	flex: 1;
+	aspect-ratio: 16/9;
+	background: #222;
+	width: 50%;
+	box-shadow: 0 0 2px #0009;
+	border: none;
+	border-radius: 4px;
+}
+
+.feature .frameBox .eps {
+	flex: 1;
+	width: 50%;
+	display: grid;
+	grid-template: repeat(14, minmax(auto, 200px))/ 1fr;
+	grid-gap: 20px 0;
+	padding: 0 10px;
+	justify-items: stretch;
+	aspect-ratio: 16/9;
+	overflow-y: auto;
+}
+.feature .frameBox .eps .btn {
+  color: #000;
+  display: flex;
+  position: relative;
+  border: none;
+  padding: 0;
+}
+.frameBox .eps .btn:hover {
+  background: #a00;
+  box-shadow: -1px -1px #0009 inset, 1px 1px #fff7 inset;
+  border: 1px #000 solid;
+  font-weight: 600;
+  transform: scale(0.98);
+}
+.frameBox .eps .btn:hover .link {
+  text-decoration: none;
+  color: #fff;
+}
+.frameBox .eps .btn:hover .delete {
+  transform: scaleX(1);
+}
+.frameBox .eps .btn .link {
+  display: flex;
+  padding: 10px;
+  flex: 0 0 85%;
+  width: 0;
+  color: inherit;
+  grid-gap: 10px;
+  font-weight: 600;
+}
+.frameBox .eps .btn .link img {
+  aspect-ratio: 16/ 9;
+  background: #222;
+  flex: 0 0 30%;
+  width: 0;
+  align-self: center;
+  border: 1px #000 solid;
+}
+.frameBox .eps .btn .link p {
+  align-self: start;
+  flex: 0 0 70%;
+  width: 0;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+.frameBox .eps .btn .delete {
+  flex: 0 0 15%;
+  width: 0;
+  background: #000;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  box-shadow: 0 1px #fff9 inset;
+  display: flex;
+  transform-origin: right center;
+  transform: scaleX(0);
+  transition: all 0.3s;
+}
+
+
+.feature .add {
+	display: flex;
+	justify-content: right;
+	align-items: center;
+	padding: 10px;
+	height: 100px;
+}
+
+.feature .add .btn {
+	background: #a00;
+	border-color: #a00;
+	padding: 6px;
+	min-width: 120px;
+	font-size: 20px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+
+
+/* this for for Gallery Page */
+.gallery .uploadBox {
+	height: 340px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.gallery .uploadBox .title {
+	flex: 1;
+	width: 50%;
+	padding: 20px;
+	grid-gap: 10px;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+}
+
+.uploadBox .title h2 {
+	color: #a00;
+	font-size: 36px;
+	text-transform: uppercase;
+	border-bottom: 4px solid #a00;
+	align-self: stretch;
+}
+
+.uploadBox .title h4 {
+	color: #0009;
+	font-size: 20px;
+}
+
+.uploadBox .title .add {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.uploadBox .title .add .btn {
+	color: #fff;
+	padding: 8px;
+	margin: 10px 0 0;
+	font-size: 18px;
+	text-transform: uppercase;
+	background: #a00;
+	border-color: #a00;
+	display: flex;
+	min-width: 160px;
+	justify-content: space-evenly;
+}
+
+.uploadBox img {
+	flex: 1;
+	width: 50%;
+	transform: scale(0.85);
+}
+
+/* this is for uploaded content*/
+.gallery .mainBox {
+	color: #fff9;
+	grid-gap: 10px;
+	padding: 10px;
+	display: grid;
+	grid-template: auto / repeat(3, 1fr);
+}
+.gallery nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 50px;
+  padding: 5px 0;
+}
+.gallery nav a {
+  padding: 5px 8px;
+  color: #000;
+  font-weight: 800;
+  word-spacing: 5px;
+  border: 3px solid transparent;
+  text-transform: uppercase;
+  transform-origin: left center;
+  transition: all 0.3s;
+}
+.gallery nav a.active, .gallery nav a:hover {
+  color: #a00;
+  text-decoration: none;
+  border-bottom: 3px solid #a00;
+  text-align: center;
+}
+
+.gallery .mainBox .list {
+	padding: 10px;
+	color: #000;
+	border-radius: 4px;
+	display: flex;
+	flex-flow: column;
+	grid-gap: 10px;
+	align-content: start;
+	box-shadow: 0 0 2px #0009;
+	background: #ddd;
+}
+
+.mainBox .list:hover {
+	background: #a00;
+	border: 1px solid #000;
+	box-shadow: -2px -2px #0009 inset, 2px 2px #fff7 inset;
+	color: #fff;
+}
+
+.mainBox .list .userPost {
+	display: flex;
+	justify-content: space-between;
+	font-size: 12px;
+}
+
+.mainBox .list .title h3 {
+	font-size: 24px;
+}
+
+.mainBox .list .vPlayer, .list .iPlayer {
+	border: 1px solid #000;
+	background: #222;
+	aspect-ratio: 16/9;
+	width: 100%;
+}
+#pic {
+  display: none;
+}
+.mainBox .fslist {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  inset: 0;
+  width: 100vw;
+  background: #0007;
+}
+.mainBox .fslist:hover {
+  border-radius: 0;
+  background: #0007;
+  border: none;
+  box-shadow: none;
+}
+.mainBox .fslist .iPlayer {
+  aspect-ratio: unset;
+  border: none;
+  padding: 5px;
+  background: #fff;
+  max-height: 98%;
+  align-self: center;
+  justify-self: center;
+  width: auto;
+  max-width: 96%;
+}
+.mainBox .fslist .title {
+  display: none;
+}
+.mainBox .fslist .userPost {
+  display: none;
+}

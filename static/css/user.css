@@ -1,0 +1,61 @@
+/* this is my account page*/
+.account {
+  background: #000;
+}
+
+
+
+/* this user popup */
+.user_popup {
+  position: absolute;
+  right: 10px;
+  z-index: 5;
+  opacity: 0;
+  transform: scale(0);
+}
+.user_popup.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.user_popup  .userNav {
+  display: flex;
+  flex-flow: column;
+  background: #ddd;
+  text-align: center;
+  border-radius: 4px;
+  -webkit-tap-highlight-color: #f007;
+  overflow: hidden;
+  outline: 2px #a00 outset;
+  outline-offset: -2px;
+  box-shadow: 0 0 3px #0009;
+}
+
+.user_popup .userNav a {
+  text-decoration: none;
+  border-block-end: 1px solid #0005;
+  color: #000;
+  padding: 10px 100px;
+}
+
+.user_popup .userNav a:hover {
+  background: #a00;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+/* this is for tab and mobile user */ 
+
+@media only screen and (max-width: 868px) {
+  .user_popup {
+    position: fixed;
+    top: 40vh;
+    right: 50%;
+    transform: scale(0) translateX(50%);
+  }
+  .user_popup.show {
+    transform: scale(1) translateX(50%);
+  }
+}
