@@ -1,0 +1,31 @@
+<!-- this is for  user popup-->
+<section class="user_popup">
+  <nav class="userNav">
+    <a href="/account">Account</a>
+    <a href="/setting">Setting</a>
+    <a href="/logout">Logout</a>
+  </nav>
+</section>
+
+<!-- this is for login popup -->
+<section class="login">
+  <div class="form" id="loginForm">
+  	<span class="fas fa-times cancel" id="hideLog"></span>
+  	<form id="boxsign" method="POST" action="#" accept-charset="utf-8">
+  		<h2>Login</h2>
+  		<p>Don't have an Account? <a href="/register"> Sign in</a></p>
+  		<div class="field">
+  			<input type="email" id="email" name="email" placeholder=" " pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Please Complete your email address" required />
+  			<label for="email">Email ID</label>
+  		</div>
+  		<div class="field">
+  			<input type="password" id="password" name="password" placeholder=" " required pattern=".{8,}" title="Please Enter Correct Password" />
+  			<label for="password">Password</label>
+  		</div>
+  		<button class="btn" type="submit">
+  		  <i class="fas fa-user"></i>
+  		  <strong>Login</strong>
+  		</button>
+  	</form>
+  </div>
+</section>
